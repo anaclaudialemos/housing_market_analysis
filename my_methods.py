@@ -221,7 +221,7 @@ def get_filtered_data(data):
 
 @st.cache(allow_output_mutation=True, suppress_st_warning=True)
 def display_portfolio_density_map(data):
-    data = data.head(500)
+
     map = folium.Map(location=[data['lat'].mean(), data['long'].mean()], default_zoom_start=15)
     marker_cluster = MarkerCluster().add_to(map)
 
@@ -236,7 +236,6 @@ def display_portfolio_density_map(data):
 @st.cache(allow_output_mutation=True, suppress_st_warning=True)
 def display_price_density_map(data, geodata):
 
-    data = data.head(500)
     df_map = data[['buying_price', 'zipcode']].groupby('zipcode').mean().reset_index()
     df_map.columns = ['Zipcode', 'Price']
 
