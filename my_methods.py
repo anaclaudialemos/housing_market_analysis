@@ -347,7 +347,7 @@ def display_price_waterfront(data):
 
     price_plot.update_layout(xaxis=dict(tickmode='array',
                                         tickvals=[0, 1],
-                                        ticktext=['No Waterfront', 'Waterfront']))
+                                        ticktext=['Not Waterfront', 'Waterfront']))
 
     isnot_waterfront = data_waterfront.iloc[0,1]
     is_waterfront = data_waterfront.iloc[1,1]
@@ -371,7 +371,7 @@ def display_price_view_condition(data):
 
     price_plot.update_layout(xaxis=dict(tickmode='array',
                                         tickvals=[0, 1],
-                                        ticktext=['Good View and Good Condition', 'No Good View and Good Condition']))
+                                        ticktext=['Good View and Not Good Condition', 'Not Good View and Good Condition']))
     
     gv_notgc = data_view_condition.iloc[0,1]
     notgv_gc = data_view_condition.iloc[1,1]
