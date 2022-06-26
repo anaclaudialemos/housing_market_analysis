@@ -388,7 +388,7 @@ def display_price_age(data):
     newer_plot = px.bar(data_newer, x='newer', y='buying_price', 
                         labels={'buying_price': 'Average Price (USD)', 'newer': 'Properties'})
     
-    newer_plot.update_layout(xaxis=dict(tickmode='array',
+    newer_plot.update_layout(xaxis=dict(tickmode='array', 
                                         tickvals=[0, 1],
                                         ticktext=['Older', 'Newer']))
 
@@ -467,8 +467,7 @@ def display_suggestions_tobuy(data):
     df_tobuy['expected_profit'] = df_tobuy[['buying_price', 
                                             'maximal_expend', 
                                             'suggested_selling_price']].apply(
-                                                lambda x: x['suggested_selling_price'] - x['maximal_expend'] - x['buying_price'], 
-                                                axis=1)
+                                                lambda x: x['suggested_selling_price'] - x['maximal_expend'] - x['buying_price'], axis=1)
 
     tot_initial_investment = np.round(df_tobuy['buying_price'].sum(), 2)
     tot_maximal_expend     = np.round(df_tobuy['maximal_expend'].sum(), 2)
