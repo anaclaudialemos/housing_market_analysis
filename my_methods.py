@@ -112,8 +112,8 @@ def get_filtered_data(data):
     f_date             = st.sidebar.slider('Date range:', min_date, max_date, (min_date, max_date))
     to_disp_date       = data.loc[data['date'].between(f_date[0], f_date[1])]
 
-    min_yr_built       = data['yr_built'].min()
-    max_yr_built       = data['yr_built'].max()
+    min_yr_built       = int(data['yr_built'].min())
+    max_yr_built       = int(data['yr_built'].max())
     f_yr_built         = st.sidebar.slider('Year of built range:', min_yr_built, max_yr_built, (min_yr_built, max_yr_built))
     to_disp_yr_built   = data.loc[data['yr_built'].between(f_yr_built[0], f_yr_built[1])]
 
@@ -343,11 +343,11 @@ def display_price_waterfront(data):
     data_waterfront = data[['buying_price', 'waterfront']].groupby('waterfront').median().reset_index()
 
     price_plot = px.bar(data_waterfront, x='waterfront', y='buying_price',
-                        labels={'buying_price': 'Median Price (USD)', 'waterfront': ''})
+                        labels={'buying_price': 'Median Price (USD)', 'waterfront': 'Properties'})
 
     price_plot.update_layout(xaxis=dict(tickmode='array',
                                         tickvals=[0, 1],
-                                        ticktext=['No Waterfront Properties', 'Waterfront Properties']))
+                                        ticktext=['No Waterfront', 'Waterfront']))
 
     isnot_waterfront = data_waterfront.iloc[0,1]
     is_waterfront = data_waterfront.iloc[1,1]
@@ -371,7 +371,7 @@ def display_price_view_condition(data):
 
     price_plot.update_layout(xaxis=dict(tickmode='array',
                                         tickvals=[0, 1],
-                                        ticktext=['With Good View and Not in Good Conditions', 'Without Good View and in Good Conditions']))
+                                        ticktext=['Good View and Good Condition', 'No Good View and Good Condition']))
     
     gv_notgc = data_view_condition.iloc[0,1]
     notgv_gc = data_view_condition.iloc[1,1]
@@ -386,11 +386,11 @@ def display_price_age(data):
     data_newer = data[['buying_price', 'newer']].groupby('newer').median().reset_index()
 
     newer_plot = px.bar(data_newer, x='newer', y='buying_price', 
-                        labels={'buying_price': 'Average Price (USD)', 'newer': ''})
+                        labels={'buying_price': 'Average Price (USD)', 'newer': 'Properties'})
     
     newer_plot.update_layout(xaxis=dict(tickmode='array',
                                         tickvals=[0, 1],
-                                        ticktext=['Older Properties', 'Newer Properties']))
+                                        ticktext=['Older', 'Newer']))
 
     isnot_newer = data_newer.iloc[0,1]
     is_newer    = data_newer.iloc[1,1]
