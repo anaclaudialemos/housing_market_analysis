@@ -323,12 +323,12 @@ def display_price_yrbuilt(data):
 
 def display_physics_optios():
     phys_opt = st.sidebar.radio('Select one of the following options to display attributes plots:',
-                                options=('Properties by Bedrooms',
-                                         'Properties by Bathrooms',
-                                         'Properties by Floors',
-                                         'Properties by Waterfront',
-                                         'Properties by View',
-                                         'Show all'), index=5)
+                                 options=('Properties by Bedrooms',
+                                          'Properties by Bathrooms',
+                                          'Properties by Floors',
+                                          'Properties by Waterfront',
+                                          'Properties by View',
+                                          'Show all'), index=5)
     
     return phys_opt
 
