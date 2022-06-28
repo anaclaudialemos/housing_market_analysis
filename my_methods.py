@@ -24,6 +24,9 @@ def get_geofile(url):
 
     return geofile
 
+def convert_csv(data):
+    return data.to_csv(index=False).encode('utf-8')
+
 @st.cache(allow_output_mutation=True, suppress_st_warning=True)
 def display_data_overview(data, f_attributes, f_zipcode):
 

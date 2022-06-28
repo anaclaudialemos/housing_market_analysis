@@ -69,6 +69,12 @@ if __name__ == "__main__":
 
         st.header('Portfolio Overview')
         st.dataframe(display_data_overview(df, f_attributes, f_zipcode))
+
+        # downloading table
+        df_csv = convert_csv(display_data_overview(df, f_attributes, f_zipcode))
+        st.download_button(label="Download this table as CSV",
+                           data=df_csv, file_name='suggestions_to_buy_selected_attributes.csv',
+                           mime='text/csv')
     
     if options == 'Maps':
         st.title('Maps')
@@ -285,12 +291,18 @@ if __name__ == "__main__":
 
         st.sidebar.markdown('\n')
         st.dataframe(display_data_overview(df_tobuy, f_attributes, f_zipcode))
+
+        # downloading table
+        df_csv = convert_csv(display_data_overview(df_tobuy, f_attributes, f_zipcode))
+        st.download_button(label="Download this table as CSV",
+                           data=df_csv, file_name='suggestions_to_buy_selected_attributes.csv',
+                           mime='text/csv')
         
         st.markdown('\n')
 
         st.markdown(f'**Total Profit: {tot_expected_profit:,.2f} USD, which represents {percentage}% of the total investment.**')
-        st.markdown(f"""Initial Investment: {tot_initial_investment:,.2f} USD   
-                        Expenditures: {tot_maximal_expend:,.2f} USD""")
+        st.markdown(f"""Investment in Buying Properties: {tot_initial_investment:,.2f} USD   
+                        Investment in Repairs and Renovations: {tot_maximal_expend:,.2f} USD""")
 
         if st.sidebar.checkbox('Display Map'):
             
