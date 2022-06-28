@@ -73,7 +73,7 @@ if __name__ == "__main__":
         # downloading table
         df_csv = convert_csv(display_data_overview(df, f_attributes, f_zipcode))
         st.download_button(label="Download this table as CSV",
-                           data=df_csv, file_name='suggestions_to_buy_selected_attributes.csv',
+                           data=df_csv, file_name='selected_attributes.csv',
                            mime='text/csv')
     
     if options == 'Maps':
