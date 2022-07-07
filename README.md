@@ -1,8 +1,7 @@
-# King County Housing Market Insights
+# King County Housing Market Insights 
 
 <img src="images/seattle.png">
 
-## Summary
 This project aimed to provide a data-driven business solution to answer very common questions in the housing market through exploratory data analysis (EDA) -  which properties should the company buy and how long wait before selling them, and what would the selling price be?     
 
 As part of the deliverables, an online dashboard was developed, with the properties available to be part of the company's portfolio having attribute filters, maps with the distribution of the properties, key statistics, the main insights from the exploratory analysis, and the expected profit of the properties suggested for purchase.
@@ -18,7 +17,7 @@ To answer the business questions, the House Sales in King County Dataset from [K
 
 Main visualizations are available on an online [dashboard](https://analysis-king-county-housing.herokuapp.com/) made using Streamlit and hosted using Heroku. It can be accessed by anyone on mobile or desktop.
 
-## Business Problem
+## Business Problem 
 House Rocket business model consists of purchasing and reselling properties through a digital platform. The company is looking for new properties for its portfolio. The data scientist is in charge to help find the best business opportunities by answering the questions: 
 
 1. Which properties should the company buy? 
