@@ -97,7 +97,7 @@ Based on commercial criteria, 8,130 properties are recommended to be purchased b
 </details>
 
 ## Solution Strategy
-1. Understand the business mode and the business problem. 
+1. Understand the business model and the business problem. 
 2. Data collection – download the data from [Kaggle](https://www.kaggle.com/harlfoxem/housesalesprediction).
 3. Data description and filtering  – check data types, missing values, duplicates, inconsistent values.
 4. Draw hypotheses.
