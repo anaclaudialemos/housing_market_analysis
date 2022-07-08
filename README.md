@@ -15,7 +15,7 @@ This challenge aimed to answer the following questions that may arise for any co
 
 To answer the business questions, the House Sales in King County Dataset from [Kaggle](https://www.kaggle.com/datasets/harlfoxem/housesalesprediction) was investigated through exploratory data analysis (EDA). King County is located in the U.S. state of Washington. The population was 2,252,782 in the 2019 census estimate, making it the most populous county in Washington, and the 12th-most populous in the United States. The county seat is Seattle, also the state’s most populous city. This dataset has 21,597 listings from May 2014 to May 2015, with features covering the price, attractiveness, size, location, and comparison to 15 nearby homes.   
 
-Main visualizations are available on an online [dashboard](https://analysis-king-county-housing.herokuapp.com/) made using Streamlit and hosted using Heroku. It can be accessed by anyone on mobile or desktop.
+Main visualizations are available on an online [dashboard](https://king-county-housing-analysis.herokuapp.com/) made using Streamlit and hosted using Heroku. It can be accessed by anyone on mobile or desktop.
 
 ## Business Problem 
 House Rocket business model consists of purchasing and reselling properties through a digital platform. The company is looking for new properties for its portfolio. The data scientist is in charge to help find the best business opportunities by answering the questions: 
@@ -105,7 +105,7 @@ Based on commercial criteria, 8,130 properties are recommended to be purchased b
 7. Insights conclusion and business decision.
 8. Feature engineering for business decision – `median_price_zipcode`, `decision`, `maximal_expend`, `suggested_selling_price`, `expected_profit`.
 9. Create the dashboard on Streamlit.
-10. Deploy dashboard on [Heroku](https://analysis-king-county-housing.herokuapp.com/).
+10. Deploy dashboard on [Heroku](https://king-county-housing-analysis.herokuapp.com/).
 
 ## Main Insights
 **At the median, waterfront properties are 211.11% more expensive.**     
