@@ -146,7 +146,7 @@ Prices are slightly higher in spring and summer, but when taking into account th
 ## Conclusion
 It was possible to create indicators of suitable properties to maximize the company's profits. By making assumptions about the key features involved in the case, I outlined a solution plan that saved me time and gave me the right directions to seek answers.     
 
-The main insights obtained from the exploratory data analysis reaffirmed some hypotheses and pointed to new ways of doing business, such as waterfront properties and properties with a good view. The solution created also provides an easy-to-use interactive online dashboard that can be accessed on mobile or desktop, which makes our solution accessible and shareable, facilitating decision-making.
+The main insights obtained from the exploratory data analysis reaffirmed some hypotheses and pointed to new ways of doing business, such as waterfront properties and properties with a good view. The solution created also provides an easy-to-use interactive online [dashboard](https://king-county-housing-analysis.herokuapp.com/) that can be accessed on mobile or desktop, which makes our solution accessible and shareable, facilitating decision-making.
 
 As a main result, based on commercial criteria, 8,130 properties are recommended to be acquired by House Rocket resulting in a profit of 702,080,905.28 USD, which represents 20.33% of the total investment. This result already considering repairs or renovations expenses.
 
