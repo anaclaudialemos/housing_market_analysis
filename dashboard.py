@@ -14,6 +14,7 @@ from PIL                   import Image
 ## pre-defined functions 
 from my_methods import*
 
+
 ## --- streamlit settings
 
 ## layout config
@@ -31,7 +32,7 @@ if __name__ == "__main__":
 
     ## data extraction
     df = get_data('datasets/kc_house_data_processed.csv')	
-    geofile = get_geofile( 'https://opendata.arcgis.com/datasets/83fc2e72903343aabff6de8cb445b81c_2.geojson' )
+    geofile = get_geofile('zipcodes.geojson')
 
     df = df[['id', 'date', 'buying_price', 'season', 'zipcode', 'newer', 'yr_built', 'bedrooms', 'bathrooms', 'sqft_living', 'price_sqft' ,'sqft_lot', 'floors',
              'basement', 'waterfront', 'view', 'condition', 'grade', 'renovated', 'yr_renovated','sqft_above', 'sqft_basement', 'lat', 'long', 'sqft_living15', 'sqft_lot15']]

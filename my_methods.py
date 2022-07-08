@@ -19,8 +19,8 @@ def get_data(path):
     return data
 
 @st.cache(allow_output_mutation=True)
-def get_geofile(url):
-    geofile = geopandas.read_file(url)
+def get_geofile(geojson):
+    geofile = geopandas.read_file(geojson)
 
     return geofile
 
